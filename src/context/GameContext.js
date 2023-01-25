@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import initialCards from './cards-data';
+import initialCards from '../cards-data.js';
 
 const GameContext = createContext();
 const GameProvider = ({ children }) => {
