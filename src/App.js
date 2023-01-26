@@ -6,7 +6,7 @@ import ExecutePassButton from './components/ExecutePassButton';
 import { GameContext } from './context/GameContext.js';
 
 function App() {
-  const { selectedCard, playerOneHand, playerTwoHand, playerThreeHand, passCard, deck } =
+  const { selectedCard, playerOneHand, playerTwoHand, playerThreeHand, deck } =
     useContext(GameContext);
 
   return (
@@ -18,7 +18,7 @@ function App() {
         <Player player={3} hand={playerThreeHand} />
         <CardList cards={deck} player={'deck'} />
       </section>
-      <section>{selectedCard && <ExecutePassButton passCard={passCard} />}</section>
+      <section>{selectedCard && <ExecutePassButton />}</section>
     </div>
   );
 }
